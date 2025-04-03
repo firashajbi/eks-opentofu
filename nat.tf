@@ -11,7 +11,7 @@ resource "aws_nat_gateway" "nat" {
     subnet_id = aws_subnet.public_subnet_zone1.id
     depends_on = [ aws_internet_gateway.aws_igw ]
     tags= {
-        Name = "${local-env}-nat"
+        Name = "${local.env}-nat"
     }
   
 }
